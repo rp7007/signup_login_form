@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CareerGuide.com</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }    
+
+    .heading {
+        margin-bottom: 5px;
+        font-size: 24px;
+        margin: auto;
+      }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .box1 {
+        width: 95%;
+        padding: 10px;
+        background-color: rgb(214, 23, 23);
+
+        text-align: center;
+        border: 1px solid #ccc;
+      }
+
+      .box1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+    .form-group input {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      /* border-radius: 5px; */
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #0db4c0;
+      color: #fff;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #0577ac;
+    }
+    .box2 {
+        width: 100%;
+        padding: 5px;
+        background-color: white;
+        text-align: right;
+        /* border: 1px solid #ccc; */
+      }
+
+    .box2 a {
+      text-decoration: none;
+      color: black;    
+    }
+
+    .box2 a:hover {
+      color: #0577ac;
+    }
+
+    .box3{
+      margin: 0;
+      padding: 0;
+      display: inline;      
+    }
+    
+    .box4 {
+      width: 50px;
+        padding: 5px;
+        margin: 60px;
+        /* background-color: white; */        
+        border: 2px solid black;
+        display: inline;
+        
+    }
+
+    .signup-link {
+      text-decoration: none;
+      color: black;    
+
+    }
+
+    .signup-link:hover {
+      color: #0577ac;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p class="heading">SIGN IN!</p>
+    <form method="POST" action="/">
+      <div class="form-group">
+        <p class="box1"><a href="#">Google</a></p>
+      </div>
+      <div class="form-group">  
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>      
+      <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>      
+      <div class="form-group">
+        <input type="submit" value="LOG IN">
+      </div>
+      <div class="form-group">
+        <p class="box2"><a href="#" class="forgot-password-link">Forgot Your Password?</a></p>
+        
+        <p class="box3">Don't Have An Account Yet?</p><span class="box4"><a href="signup.ejs" class="signup-link">SIGN IN!</a></span>
+      
+        
+              
+      </div>
+    </form>
+  </div>
+</body>
+<!-- <script>
+    // Add your JavaScript code here
+document.getElementById('login-form').addEventListener('login', function (e) {
+    e.preventDefault();
+  
+    // Retrieve form data
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+  
+    // Create an object with form data
+    const formData = {
+      email,
+      password
+    };
+  
+    // Send a POST request to the server
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response from the server
+        if (data.error) {
+          console.error(data.error);
+        } else {
+          console.log(data.message);
+          // Redirect to dashboard or display a success message
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  });  
+</script> -->
+</html>
